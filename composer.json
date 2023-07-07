@@ -1,5 +1,5 @@
 {
-    "name": "navigate/magento2-allow-svg-webp-avif-image",
+    "name": "navigate/magento-2-allow-svg-webp-avif-image",
     "description": "Navigate Product Allow Svg, Webp and Avif Image Extension for Magento 2",
     "require": {
         "navigate/module-core": "^1.0.0",
