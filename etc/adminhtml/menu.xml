@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+ Navigate Commerce
+
+ @author        Navigate Commerce
+ @package       Navigate_AllowSvgWebpAvifImage
+ @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ @license       https://www.navigatecommerce.com/end-user-license-agreement
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Navigate_AllowSvgWebpAvifImage::main" title="Allow Svg/Webp/Avif Image" translate="title" module="Navigate_AllowSvgWebpAvifImage" parent="Navigate_Core::core" sortOrder="70" resource="Navigate_AllowSvgWebpAvifImage::main"/>
+        <add id="Navigate_AllowSvgWebpAvifImage::configuration" title="Configurations" module="Navigate_AllowSvgWebpAvifImage" parent="Navigate_AllowSvgWebpAvifImage::main" sortOrder="10" action="adminhtml/system_config/edit/section/navigate_allowsvgwebpavifimage" resource="Navigate_AllowSvgWebpAvifImage::configuration" target="_blank"/>
+    </menu>
+</config>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+ Navigate Commerce
+
+ @author        Navigate Commerce
+ @package       Navigate_AllowSvgWebpAvifImage
+ @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ @license       https://www.navigatecommerce.com/end-user-license-agreement
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\MediaGalleryIntegration\Plugin\SaveImageInformation">
+        <arguments>
+            <argument name="imageExtensions" xsi:type="array">
+                <item name="svg" xsi:type="string">svg</item>
+                <item name="webp" xsi:type="string">webp</item>
+                <item name="avif" xsi:type="string">avif</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

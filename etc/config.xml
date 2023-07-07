@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+ Navigate Commerce
+
+ @author        Navigate Commerce
+ @package       Navigate_AllowSvgWebpAvifImage
+ @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ @license       https://www.navigatecommerce.com/end-user-license-agreement
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <navigate_allowsvgwebpavifimage>
+            <general>
+                <enabled>1</enabled>
+            </general>
+            <extensions>
+                <vector>
+                    <svg>svg</svg>
+                    <svg_xml>svg+xml</svg_xml>
+                    <avif>avif</avif>
+                </vector>
+                <web_image>
+                    <webp>webp</webp>
+                </web_image>
+            </extensions>
+        </navigate_allowsvgwebpavifimage>
+        <dev>
+            <image>
+                <adapters>
+                    <GD2>
+                        <class>Navigate\AllowSvgWebpAvifImage\Model\Image\Adapter\Gd2Rewrite</class>
+                    </GD2>
+                </adapters>
+            </image>
+        </dev>
+    </default>
+</config>

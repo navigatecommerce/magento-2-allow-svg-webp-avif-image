@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+ Navigate Commerce
+
+ @author        Navigate Commerce
+ @package       Navigate_AllowSvgWebpAvifImage
+ @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ @license       https://www.navigatecommerce.com/end-user-license-agreement
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Navigate_AllowSvgWebpAvifImage" setup_version="1.0.0" schema_version="1.0.0">
+        <sequence>
+            <module name="Navigate_Core"/>
+        </sequence>
+    </module>
+</config>

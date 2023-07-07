@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+ Navigate Commerce
+
+ @author        Navigate Commerce
+ @package       Navigate_AllowSvgWebpAvifImage
+ @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ @license       https://www.navigatecommerce.com/end-user-license-agreement
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
+        <arguments>
+            <argument name="extensions" xsi:type="array">
+                <item name="allowed" xsi:type="array">
+                    <item name="svg" xsi:type="string">image/svg</item>
+                    <item name="svg-xml" xsi:type="string">image/svg+xml</item>
+                    <item name="webp" xsi:type="string">image/webp</item>
+                    <item name="avif" xsi:type="string">image/avif</item>
+                </item>
+                <item name="image_allowed" xsi:type="array">
+                    <item name="svg" xsi:type="string">image/svg</item>
+                    <item name="svg-xml" xsi:type="string">image/svg+xml</item>
+                    <item name="webp" xsi:type="string">image/webp</item>
+                    <item name="avif" xsi:type="string">image/avif</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Magento\Catalog\CategoryImageUpload" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="svg" xsi:type="string">svg</item>
+                <item name="svg-xml" xsi:type="string">image/svg+xml</item>
+                <item name="webp" xsi:type="string">webp</item>
+                <item name="avif" xsi:type="string">avif</item>
+            </argument>
+            <argument name="allowedMimeTypes" xsi:type="array">
+                <item name="svg" xsi:type="string">image/svg</item>
+                <item name="svg-xml" xsi:type="string">image/svg+xml</item>
+                <item name="webp" xsi:type="string">image/webp</item>
+                <item name="avif" xsi:type="string">image/avif</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\MediaStorage\App\Media">
+        <plugin name="vector-webp-images-media-plugin" type="Navigate\AllowSvgWebpAvifImage\Plugin\App\MediaPlugin" />
+    </type>
+    <!-- <type name="Magento\MediaStorage\Model\File\Uploader">
+        <plugin name="allow-webp-vector-images" type="Navigate\AllowSvgWebpAvifImage\Plugin\File\UploaderPlugin" />
+    </type> -->
+    <type name="Magento\MediaStorage\Model\File\Validator\NotProtectedExtension">
+        <plugin name="allow-svg-webp-avif" type="Navigate\AllowSvgWebpAvifImage\Plugin\File\Validator\NotProtectedExtensionPlugin" />
+    </type>
+    <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
+        <plugin name="allow-svg-webp-avif" type="Navigate\AllowSvgWebpAvifImage\Plugin\Wysiwyg\Images\StoragePlugin" />
+    </type>
+    <type name="Magento\Cms\Controller\Adminhtml\Wysiwyg\Images\Thumbnail">
+        <plugin name="allow-svg-webp-avif" type="Navigate\AllowSvgWebpAvifImage\Plugin\Controller\Adminhtml\Wysiwyg\Images\ThumbnailPlugin" />
+    </type>
+    <type name="Magento\Cms\Controller\Adminhtml\Wysiwyg\Directive">
+        <plugin name="allow-svg-webp-avif" type="Navigate\AllowSvgWebpAvifImage\Plugin\Controller\Adminhtml\Wysiwyg\DirectivePlugin" />
+    </type>
+
+    <type name="Magento\Theme\Model\Design\Backend\Logo">
+        <plugin name="allow-svg-webp-avif" type="Navigate\AllowSvgWebpAvifImage\Plugin\Design\Backend\ImagePlugin" />
+    </type>
+    <type name="Magento\Theme\Model\Design\Backend\Favicon">
+        <plugin name="allow-svg-webp-avif" type="Navigate\AllowSvgWebpAvifImage\Plugin\Design\Backend\ImagePlugin" />
+    </type>
+    <type name="Magento\Theme\Model\Design\Backend\Image">
+        <plugin name="allow-svg-webp-avif" type="Navigate\AllowSvgWebpAvifImage\Plugin\Design\Backend\ImagePlugin" />
+    </type>
+
+    <type name="Magento\Swatches\Helper\Media">
+        <plugin name="allow-webp-images" type="Navigate\AllowSvgWebpAvifImage\Plugin\Swatches\Helper\MediaPlugin" />
+    </type>
+
+    <type name="Magento\MediaGallerySynchronization\Model\CreateAssetFromFile">
+        <arguments>
+            <argument name="assetFactory" xsi:type="object">Navigate\AllowSvgWebpAvifImage\Model\AssetFactory</argument>
+        </arguments>
+    </type>
+    <type name="Magento\PageBuilder\Controller\Adminhtml\ContentType\Image\Upload">
+        <arguments>
+            <argument name="uploaderFactory" xsi:type="object">Navigate\AllowSvgWebpAvifImage\Model\File\UploaderFactory</argument>
+        </arguments>
+    </type>
+</config>
