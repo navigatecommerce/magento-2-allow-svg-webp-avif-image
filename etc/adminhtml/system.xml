@@ -17,7 +17,7 @@
               <class>separator-top</class>
               <label>Allow Svg/Webp/Avif Image</label>
               <tab>navigate</tab>
-              <resource>Navigate_AllowSvgWebAvifImage::config_allowsvgwebpavifimage</resource>
+              <resource>Navigate_AllowSvgWebpAvifImage::config_allowsvgwebpavifimage</resource>
               <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Setting</label>
                 <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
