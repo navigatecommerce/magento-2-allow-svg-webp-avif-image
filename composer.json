@@ -2,18 +2,18 @@
     "name": "navigate/magento-2-allow-svg-webp-avif-image",
     "description": "Navigate Product Allow Svg, Webp and Avif Image Extension for Magento 2",
     "require": {
-        "navigate/module-core": "^1.0.0",
+        "navigate/module-core": "*",
         "php": "~7.2.0|~7.3.0|~7.4.0|~8.0.0|~8.1.0|~8.2.0"
     },
     "type": "magento2-module",
     "license": "proprietary",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "authors": [
         {
-          "name": "Navigate Commerce",
-          "email": "support@navigatecommerce.com",
-          "homepage": "https://www.navigatecommerce.com",
-          "role": "Technical Support"
+            "name": "Navigate Commerce",
+            "email": "support@navigatecommerce.com",
+            "homepage": "https://www.navigatecommerce.com",
+            "role": "Technical Support"
         }
     ],
     "autoload": {

@@ -10,9 +10,6 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="navigate" translate="Navigate Extensions" sortOrder="100" class="navigate-extensions-tab">
-            <label>Navigate Extensions</label>
-        </tab>
         <section id="navigate_allowsvgwebpavifimage" translate="label" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
               <class>separator-top</class>
               <label>Allow Svg/Webp/Avif Image</label>
